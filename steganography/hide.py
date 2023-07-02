@@ -3,11 +3,13 @@ import sys
 
 def split_byte(byte):
     """
+    Remove os dois bits menos significativos
     """
     return byte >> 6 & 3, byte >> 4 & 3, byte >> 2 & 3, byte & 3
 
 if __name__ == "__main__":
     """
+    Esconde a mensagem na imagem passada
     """
     image = sys.argv[1]
     secret = sys.argv[2]
